@@ -24,7 +24,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
           username: configService.get<string>('DB_USERNAME'),
           password: configService.get<string>('DB_PASSWORD'),
           database: configService.get<string>('DB_DATABASE'),
-          entities: [__dirname + './**/*.entity{.ts,.js}'], // Read all entities file with specific path
+          entities: [__dirname + '/./**/*.entity{.ts,.js}'], // Read all entities file with specific path
           synchronize: false, // Don't auto update schema, use migration instead
           migrations: [__dirname + '/../../helpers/migrations/*.migration{.ts,.js}'],
         };
